@@ -4,12 +4,14 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     var req = new XMLHttpRequest();
     req.open("GET", "https://api.coingecko.com/api/v3/exchange_rates", true);
     req.onload = onResponseReceived;
-    req.send(null);
-    function onResponseReceived() {
-      let requestJSON = JSON.parse(req.response);
+    req.send();
+    async function onResponseReceived() {
+      let requestJSON = await JSON.parse(req.response);
       let valueArray = requestJSON.rates;
+      console.log(valueArray);
       console.log("Rate Fetched");
       sendResponse({ data: valueArray, success: true });
     }
+    return true;
   }
 });
