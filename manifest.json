@@ -1,0 +1,18 @@
+{
+  "name": "Crypto Price Extension",
+  "version": "1.0",
+  "description": "View prices of all major crypto-currencies",
+  "permissions": ["activeTab", "<all_urls>"],
+  "browser_action": {
+    "default_icon": "",
+    "default_popup": "",
+    "default_title": "Crypto Price Fetcher"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/jquery-2.2.4.min.js", "scripts/content.js"]
+    }
+  ],
+  "manifest_version": 2
+}
