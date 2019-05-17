@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function() {
         valueArray = response.data;
         console.log(valueArray);
         btc_value = valueArray.usd.value;
-        eth_value = btc_value / valueArray.eth.value;
-        xlm_value = btc_value / valueArray.xlm.value;
-        xrp_value = btc_value / valueArray.xrp.value;
+        eth_value = parseFloat(btc_value / valueArray.eth.value).toFixed(4);
+        xlm_value = parseFloat(btc_value / valueArray.xlm.value).toFixed(4);
+        xrp_value = parseFloat(btc_value / valueArray.xrp.value).toFixed(4);
         document.getElementById("btc_rate").textContent = `1BTC = ${btc_value} USD`;
         document.getElementById("eth_rate").textContent = `1ETH = ${eth_value} USD`;
         document.getElementById("xrp_rate").textContent = `1XRP = ${xrp_value} USD`;
