@@ -15,7 +15,7 @@
       }
 
       body {
-        font-family: "Segoe UI", "Lucida Grande";
+        font-family: 'Segoe UI', 'Lucida Grande';
         font-size: 100%;
       }
     </style>
@@ -23,9 +23,9 @@
       <div class="page-header">
         <h3>Cryptocurrency Price Fetcher</h3>
       </div>
-      <div>
+      <!-- <div>
         <button class="btn btn-primary" id="scan">Update Price</button>
-      </div>
+      </div> -->
       <p id="message"></p>
       <ul class="list-group">
         <li class="list-group-item" id="btc_rate"></li>
@@ -33,7 +33,9 @@
         <li class="list-group-item" id="xrp_rate"></li>
         <li class="list-group-item" id="xlm_rate"></li>
       </ul>
+      <p>The prices are fetched use <a href="https://www.coingecko.com/en/api"> CoinGecko Free API</a></p>
     </div>
+
     <script src="/scripts/getPrices.js" type="text/javascript"></script>
   </body>
 </html>
