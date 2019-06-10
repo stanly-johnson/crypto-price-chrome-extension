@@ -11,7 +11,6 @@
         max-height: 500px;
         min-height: 300px;
         width: 350px;
-        background: white;
       }
 
       body {
@@ -20,20 +19,17 @@
       }
     </style>
     <div class="container">
-      <div class="page-header">
-        <h3>Cryptocurrency Price Fetcher</h3>
+      <div class="jumbotron">
+        <h3 class="lead">Crypto Price Update</h3>
       </div>
-      <!-- <div>
-        <button class="btn btn-primary" id="scan">Update Price</button>
-      </div> -->
-      <p id="message"></p>
       <ul class="list-group">
-        <li class="list-group-item" id="btc_rate"></li>
-        <li class="list-group-item" id="eth_rate"></li>
-        <li class="list-group-item" id="xrp_rate"></li>
-        <li class="list-group-item" id="xlm_rate"></li>
+        <li class="list-group-item lead" id="btc_rate"></li>
+        <li class="list-group-item lead" id="eth_rate"></li>
+        <li class="list-group-item lead" id="xrp_rate"></li>
+        <li class="list-group-item lead" id="xlm_rate"></li>
       </ul>
       <p>The prices are fetched using <a href="https://www.coingecko.com/en/api"> CoinGecko Free API</a></p>
+      <p>This is a free tool by <a href="https://cephasresearch.com"> Cephas Research</a></p>
     </div>
 
     <script src="/scripts/getPrices.js" type="text/javascript"></script>

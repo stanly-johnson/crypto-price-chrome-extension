@@ -1,12 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   var button = document.getElementById('scan');
-
-  document.getElementById('message').textContent = `Fetching prices from coingecko`;
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, { message: 'clicked_scan_button' }, function(response) {
-      document.getElementById('message').textContent = '';
       valueArray = response.data;
-      console.log(valueArray);
       btc_value = valueArray.usd.value;
       eth_value = parseFloat(btc_value / valueArray.eth.value).toFixed(4);
       xlm_value = parseFloat(btc_value / valueArray.xlm.value).toFixed(4);
